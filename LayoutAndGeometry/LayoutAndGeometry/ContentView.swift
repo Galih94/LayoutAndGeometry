@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Live long and prosper")
+            .offset(x: 11, y: 50)
             .frame(width: 300, height: 300, alignment: .topLeading)
+            .background(.green)
+        
     }
 }
 
