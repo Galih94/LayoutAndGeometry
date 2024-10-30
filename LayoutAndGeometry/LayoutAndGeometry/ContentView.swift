@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Hello world")
-                .alignmentGuide(.leading) { dimension in
-                    dimension[.trailing]
-                }
-            Text("This is longer line of text")
+            ForEach(0..<10) { position in
+                Text("number \(position)")
+                    .alignmentGuide(.leading, computeValue: { _ in
+                        Double(position) * -10
+                    })
+                
+            }
         }
         .background(.red)
         .frame(width: 400, height: 400)
