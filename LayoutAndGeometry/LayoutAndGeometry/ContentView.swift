@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Live long and prosper")
-            .frame(width: 50, height: 300)
+            .frame(width: 300, height: 300, alignment: .topLeading)
     }
 }
 
