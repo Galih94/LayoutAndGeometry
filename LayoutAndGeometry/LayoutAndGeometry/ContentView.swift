@@ -9,10 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Live long and prosper")
-            .offset(x: 11, y: 50)
-            .frame(width: 300, height: 300, alignment: .topLeading)
-            .background(.green)
+        HStack(alignment: .bottom) {
+            Text("Live")
+                .font(.caption)
+            Text("Long")
+            Text("And")
+                .font(.title)
+            Text("Prosper")
+                .font(.largeTitle)
+        }
+        .background(.green)
         
     }
 }
