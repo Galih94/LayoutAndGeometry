@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// full explanation on: https://www.hackingwithswift.com/books/ios-swiftui/understanding-frames-and-coordinates-inside-geometryreader
 struct OuterView: View {
     var body: some View {
         VStack {
