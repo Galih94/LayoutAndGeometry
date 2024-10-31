@@ -14,13 +14,13 @@ struct ContentView: View {
                 .frame(width: 200)
                 .background(.blue)
             
+            GeometryReader { proxy in
                 Image(.default)
                     .resizable()
                     .scaledToFit()
-                    .containerRelativeFrame(.horizontal, { size, axis in
-                        size * 0.8
-                    })
+                    .frame(width: proxy.size.width * 0.8)
                     .background(.green)
+            }
         }
     }
 }
