@@ -23,7 +23,9 @@ struct ContentView: View {
                         }
                 }
             }
+            .scrollTargetLayout()
         }
+        .scrollTargetBehavior(.viewAligned)
     }
 }
 
