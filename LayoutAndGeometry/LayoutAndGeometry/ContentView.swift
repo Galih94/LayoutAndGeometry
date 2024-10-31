@@ -19,11 +19,22 @@ struct ContentView: View {
                             .font(.title)
                             .frame(maxWidth: .infinity)
                             .background(colors[index % 7])
+                            .opacity(calculateOpacity(at: Double(proxy.frame(in: .global).minY)))
                             .rotation3DEffect(.degrees(proxy.frame(in: .global).minY - fullView.size.height / 2) / 5, axis: (x: 0, y: 1, z: 0))
                     }
                     .frame(height: 40)
                 }
             }
+        }
+    }
+    
+    private func calculateOpacity(at pos: Double) -> Double {
+        if pos < 60 {
+            return 0
+        } else if pos < 200 {
+            return (pos - 60) / 140
+        } else {
+            return 1 + (pos - 200) / 100
         }
     }
 }
