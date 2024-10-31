@@ -18,7 +18,7 @@ struct ContentView: View {
                             .font(.largeTitle)
                             .padding()
                             .background(.red)
-                            .rotation3DEffect(.degrees(-proxy.frame(in: .global).minY) / 8, axis: (x: 0.0, y: 1.0, z: 0.0))
+                            .rotation3DEffect(.degrees(-proxy.frame(in: .global).minX) / 8, axis: (x: 0.0, y: 1.0, z: 0.0))
                             .frame(width: 200, height: 200)
                     }
                     .frame(width: 200, height: 200)
