@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello world")
+        GeometryReader { proxy in
+            Text("Hello world")
+                .frame(width: proxy.size.width * 0.9)
+                .background(.blue)
+        }
     }
 }
 
