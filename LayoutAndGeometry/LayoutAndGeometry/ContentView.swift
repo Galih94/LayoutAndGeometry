@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(.default)
-            .resizable()
-            .scaledToFit()
-            .containerRelativeFrame(.horizontal, { size, axis in
-                size * 0.8
-            })
-            .background(.green)
+        HStack {
+            Text("IMPORTANT")
+                .frame(width: 200)
+                .background(.blue)
+            
+                Image(.default)
+                    .resizable()
+                    .scaledToFit()
+                    .containerRelativeFrame(.horizontal, { size, axis in
+                        size * 0.8
+                    })
+                    .background(.green)
+        }
     }
 }
 
