@@ -10,17 +10,18 @@ import SwiftUI
 struct ContentView: View {
     let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
     var body: some View {
-        GeometryReader { fullView in
-            ScrollView {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 0) {
                 ForEach(0..<50) { index in
                     GeometryReader { proxy in
-                        Text("row \(index)")
-                            .font(.title)
-                            .frame(maxWidth: .infinity)
-                            .background(colors[index % 7])
-                            .rotation3DEffect(.degrees(proxy.frame(in: .global).minY - fullView.size.height / 2) / 5, axis: (x: 0.0, y: 1.0, z: 0.0))
+                        Text("Number \(index)")
+                            .font(.largeTitle)
+                            .padding()
+                            .background(.red)
+                            .rotation3DEffect(.degrees(-proxy.frame(in: .global).minY) / 8, axis: (x: 0.0, y: 1.0, z: 0.0))
+                            .frame(width: 200, height: 200)
                     }
-                    .frame(height: 40)
+                    .frame(width: 200, height: 200)
                     
                 }
             }
